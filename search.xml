@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2017%2F07%2F23%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[程序员的开场白12345def start(): print('Hello World!')if __name__ == '__main__': start() 我的个人博客上线了，主要用于记录自己时不时的一些小想法和学习技术中遇到的一些问题.]]></content>
+    <content type="text"><![CDATA[程序员的开场白12345def start(): print('Hello World')if __name__ == '__main__': start() 我的个人博客上线了，主要用于记录自己时不时的一些小想法和学习技术中遇到的一些问题.]]></content>
       <categories>
         <category>生活</category>
       </categories>
