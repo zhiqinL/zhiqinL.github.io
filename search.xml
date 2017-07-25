@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Markdown语法小记]]></title>
+    <url>%2F2017%2F07%2F25%2Fmarkdown-record%2F</url>
+    <content type="text"><![CDATA[在真正写博客之前虽有对Markdown有所了解，但是从来没有仔细学习过它的各种语法，仔细想想刚开始部署GitHub的时候，还对readme的md后缀懵逼过，十分的惭愧，所以现在准备好好记录一下. 基础语法文字标题Markdonw中有两种定义标题的方式，第一种是利用 = (最高阶标题) 和- (第二阶标题)在文字下方加入底线的形式，第二种是在行首加入1到6个 #，对应标题从第一阶到第六阶. 加底线的标题最高阶标题 12这是最高阶标题 ============ 第二阶标题 12这是第二阶标题------------ 加 # 的标题123# 这是一阶标题###### 这是六阶标题 换行与分割线换行刚开始使用Markdown时，很多小伙伴可能会对换行有一些迷惑(其实就是我自己)，每次都要在两行之间空一行，但其实Markdown的换行只需要在上一行的末尾加上两个空格，再回车，就能够换行了. 分隔线Markdown中可以使用 *** 或者 ---来产生分隔线，效果如下: 注意，因为 --- 也可以用来产生二级标题，所以，用 --- 产生分隔线时，需要与上一行文字隔一行. 加粗与斜体Markdown中实现文字的加粗与斜体也是非常的简单，用两个 * 包裹文字就能实现加粗，用一个 * 包裹文字，就能实现斜体. 123**这里会加粗***这里会斜体* 列表Markdown中无序列表可以通过在文字前加上 * - 或 + 中任意一个和空格实现，在文字前加上数字，点和空格(例如1.)就能实现有序列表. 123456* 无序列表1- 无序列表2+ 无序列表31. 有序列表12. 有序列表2 图片与链接都需要加入URL的图片和链接在Markdown中的实现方式比较类似: 图片:123![Alt text](/path/to/img.jpg)or![Alt text](/path/to/img.jpg &quot;Optional title&quot;) 方括号 [] 中为图片加载不出来时的替代文字，() 中第一项为图片的地址，第二项可选择性的加或者不加，其内容是图片的title. 链接:1[text](/path/to/page) [] 中放入链接文字，()中则为具体的url. 表格表格的格式如下: 12345| col1 | col2 | col3 || :--------- |:----------:| ----------:|| row1 col1 | row1 col2 | row1 col3 || row2 col1 | row2 col2 | row2 col3 || row3 col1 | row3 col2 | row3 col3 | 效果则为: col1 col2 col3 row1 col1 row1 col2 row1 col3 row2 col1 row2 col2 row2 col3 row3 col1 row3 col2 row3 col3 引用在文字前加上 &gt; 即可加入一段引用 这是一段引用 如果需要加入很多行引用，则需要在每行前都加上 &gt; 这是多行引用 代码块对于程序员来说，如何优雅在文本中加入代码块是一件很重(zhuang)要(B)的事情，在Markdown中加入代码块有多种方式: 缩进4个空格或者1个制表符(tab键) 1前面加四个空格或者一个tab就可以形成代码块 在列表行下使用此种方法时则需要缩进两次，所以为了使用方便和文字的区域性更加明显，不是很推荐这种方法来产生代码块. 单行的代码用两个 ` 符号包裹 1`被包裹的单行代码块` 多行的代码则用分别用三个 ` 将整段代码包裹，同时用此种方法加上不同的语言名字还可以为不同的程序语言设置不同的代码高亮，完美的解决了程序员的这一刚性需求 1234\``` pythondef function(): print('这里是多行代码')\``` (因为是特殊符号，所以在展示时加入了一个 \ 取消符号的特殊含义方便展示，在实际使用时无需加上反斜杠) 其他语法兼容HTML在Markdown中可以使用HTML的标签元素来对文字进行进一步的修改，例如Markdown中的文字大小一般是无法进行直接修改的，通过HTML标签或者直接修改CSS文件就可以做到修改Markdown文件中文字的大小颜色等属性. 我变大了也变红了 代码如下: 1&lt;span style="font-size: 20px;color: red"&gt;我变大了也变红了&lt;/span&gt; 但是这些修改违背了Markdown让文档更容易读，写和改的意愿，所以一般不建议如此书写. 特殊字符自动转换在 HTML 文件中，有两个字符需要特殊处理: &lt; 和 &amp; . &lt; 符号用于起始标签，&amp; 符号则用于标记 HTML 实体，如果你只是想要显示这些字符的原型，你必须要使用实体的形式，像是 &lt; 和 &amp;. &amp; 字符尤其让网络文档编写者受折磨，如果你要打「AT&amp;T」 ，你必须要写成「AT&amp;T」。而网址中的 &amp; 字符也要转换。比如你要链接到： 1http://images.google.com/images?num=30&amp;q=larry+bird 你必须要把网址转换写为： 1http://images.google.com/images?num=30&amp;amp;q=larry+bird 才能放到链接标签的 href 属性里. 反斜杠取消符号特殊含义Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号，例如: \*我不会变斜\* 参考资料 Markdown——入门指南 Markdown 语法说明]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2017%2F07%2F23%2Fhello-world%2F</url>
     <content type="text"><![CDATA[程序员的开场白12345def start(): print('Hello World')if __name__ == '__main__': start() 我的个人博客上线了，主要用于记录自己时不时的一些小想法和学习技术中遇到的一些问题.]]></content>
