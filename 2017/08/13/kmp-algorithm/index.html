@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="随笔," />
+  <meta name="keywords" content="kmp," />
 
 
 
@@ -95,18 +95,18 @@
 
 
 
-<meta name="description" content="程序员的开场白12345def start():    print(&apos;Hello World&apos;)if __name__ == &apos;__main__&apos;:    start() 我的个人博客上线了，主要用于记录自己时不时的一些小想法和学习技术中遇到的一些问题.">
-<meta name="keywords" content="随笔">
+<meta name="description" content="字符串匹配字符串匹配是算法题中常考的一个类型，而且通常会在更复杂的题目中和其他类型的问题搭配出现。举例来说，有一个字符串”BBC ABCDAB ABCDABCDABDE”，来检测这其中是否含有另一个字符串”ABCDABD”就是字符串的匹配问题。 Brust Force原字符串:   “BBC ABCDAB ABCDABCDABDE” 长度: m匹配字符串: “ABCDABD”">
+<meta name="keywords" content="kmp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://zhiqinl.github.io/2017/07/23/hello-world/index.html">
+<meta property="og:title" content="KMP字符串匹配算法">
+<meta property="og:url" content="https://zhiqinl.github.io/2017/08/13/kmp-algorithm/index.html">
 <meta property="og:site_name" content="Zhiqin&#39;s Notes">
-<meta property="og:description" content="程序员的开场白12345def start():    print(&apos;Hello World&apos;)if __name__ == &apos;__main__&apos;:    start() 我的个人博客上线了，主要用于记录自己时不时的一些小想法和学习技术中遇到的一些问题.">
+<meta property="og:description" content="字符串匹配字符串匹配是算法题中常考的一个类型，而且通常会在更复杂的题目中和其他类型的问题搭配出现。举例来说，有一个字符串”BBC ABCDAB ABCDABCDABDE”，来检测这其中是否含有另一个字符串”ABCDABD”就是字符串的匹配问题。 Brust Force原字符串:   “BBC ABCDAB ABCDABCDABDE” 长度: m匹配字符串: “ABCDABD”">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-23T12:24:53.000Z">
+<meta property="og:updated_time" content="2017-08-14T07:27:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="程序员的开场白12345def start():    print(&apos;Hello World&apos;)if __name__ == &apos;__main__&apos;:    start() 我的个人博客上线了，主要用于记录自己时不时的一些小想法和学习技术中遇到的一些问题.">
+<meta name="twitter:title" content="KMP字符串匹配算法">
+<meta name="twitter:description" content="字符串匹配字符串匹配是算法题中常考的一个类型，而且通常会在更复杂的题目中和其他类型的问题搭配出现。举例来说，有一个字符串”BBC ABCDAB ABCDABCDABDE”，来检测这其中是否含有另一个字符串”ABCDABD”就是字符串的匹配问题。 Brust Force原字符串:   “BBC ABCDAB ABCDABCDABDE” 长度: m匹配字符串: “ABCDABD”">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="https://zhiqinl.github.io/2017/07/23/hello-world/"/>
+  <link rel="canonical" href="https://zhiqinl.github.io/2017/08/13/kmp-algorithm/"/>
 
 
 
 
 
-  <title>Hello World | Zhiqin's Notes</title>
+  <title>KMP字符串匹配算法 | Zhiqin's Notes</title>
   
 
 
@@ -313,7 +313,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://zhiqinl.github.io/2017/07/23/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://zhiqinl.github.io/2017/08/13/kmp-algorithm/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhiqin Liao">
@@ -330,7 +330,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">KMP字符串匹配算法</h1>
         
 
         <div class="post-meta">
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-23T20:19:22+08:00">
-                2017-07-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-13T17:30:38+08:00">
+                2017-08-13
               </time>
             
 
@@ -365,8 +365,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/生活/" itemprop="url" rel="index">
-                    <span itemprop="name">生活</span>
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
                   </a>
                 </span>
 
@@ -399,8 +399,104 @@
       
 
       
-        <h2 id="程序员的开场白"><a href="#程序员的开场白" class="headerlink" title="程序员的开场白"></a>程序员的开场白</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">start</span><span class="params">()</span>:</span></div><div class="line">    print(<span class="string">'Hello World'</span>)</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    start()</div></pre></td></tr></table></figure>
-<p>我的个人博客上线了，主要用于记录自己时不时的一些小想法和学习技术中遇到的一些问题.</p>
+        <h3 id="字符串匹配"><a href="#字符串匹配" class="headerlink" title="字符串匹配"></a>字符串匹配</h3><p>字符串匹配是算法题中常考的一个类型，而且通常会在更复杂的题目中和其他类型的问题搭配出现。<br>举例来说，有一个字符串”BBC ABCDAB ABCDABCDABDE”，来检测这其中是否含有另一个字符串”ABCDABD”就是字符串的匹配问题。</p>
+<h4 id="Brust-Force"><a href="#Brust-Force" class="headerlink" title="Brust Force"></a>Brust Force</h4><p><strong>原字符串:</strong>   “BBC ABCDAB ABCDABCDABDE” 长度: m<br><strong>匹配字符串:</strong> “ABCDABD”                 长度: n<br><strong>时间复杂度为:</strong> O(mn)<br>假设原字符串和匹配字符串的长度分别为m和n，暴力解法brust force通常是从第一个字符开始检测，如果遇到不匹配，则将用于匹配的字符向后移动一位，再继续从头开始匹配，直到找到完全匹配的位置或遍历完整个字符串，时间复杂度为mn。</p>
+<a id="more"></a>
+<h4 id="KMP"><a href="#KMP" class="headerlink" title="KMP"></a>KMP</h4><p>与暴力解法不同，KMP在遇到不匹配的部位时，不是直接向后移动一位，而是根据一个部分匹配值表，来确定移动的位置，具体算法步骤如下:  </p>
+<h5 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h5><p>1.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">BBC ABCDAB ABCDABCDABDE</div><div class="line">|</div><div class="line">ABCDABD</div></pre></td></tr></table></figure></p>
+<p>首先，字符串”BBC ABCDAB ABCDABCDABDE”的第一个字符与搜索词”ABCDABD”的第一个字符，进行比较。因为B与A不匹配，所以搜索词后移一位。  </p>
+<p>2.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">BBC ABCDAB ABCDABCDABDE</div><div class="line"> |</div><div class="line"> ABCDABD</div></pre></td></tr></table></figure></p>
+<p>因为B与A不匹配，搜索词再往后移。</p>
+<p>3.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">BBC ABCDAB ABCDABCDABDE</div><div class="line">    |</div><div class="line">    ABCDABD</div></pre></td></tr></table></figure></p>
+<p>就这样，直到字符串有一个字符，与搜索词的第一个字符相同为止。</p>
+<p>4.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">BBC ABCDAB ABCDABCDABDE</div><div class="line">     |</div><div class="line">    ABCDABD</div></pre></td></tr></table></figure></p>
+<p>接着比较字符串和搜索词的下一个字符，还是相同。</p>
+<p>5.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">BBC ABCDAB ABCDABCDABDE</div><div class="line">          |</div><div class="line">    ABCDABD</div></pre></td></tr></table></figure></p>
+<p>直到字符串有一个字符，与搜索词对应的字符不相同为止。<br>一个基本事实是，当空格与D不匹配时，你其实知道前面六个字符是”ABCDAB”。KMP算法的想法是，设法利用这个已知信息，不要把”搜索位置”移回已经比较过的位置，继续把它向后移，这样就提高了效率。</p>
+<p>6.<br>上诉所说的已知信息指的就是部分匹配值:  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">搜索词</th>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">C</th>
+<th style="text-align:center">D</th>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">部分匹配值</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+</tr>
+</tbody>
+</table>
+<p>部分匹配值具体如何计算下面会讲到。</p>
+<p>7.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">BBC ABCDAB ABCDABCDABDE</div><div class="line">          |</div><div class="line">    ABCDABD</div></pre></td></tr></table></figure></p>
+<p>当空格与D不匹配时，查表可以最后一个匹配字符B对应的部分匹配值为2，因此可以按照下面的公式计算出匹配字符串应该向后移动的位数:<br><code>移动位数 = 已匹配字符数 - 对应的部分匹配值</code><br>因此在这个例子里，应该讲匹配字符串向后移动 <code>6 - 2 = 4</code> 位。</p>
+<p>8.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">BBC ABCDAB ABCDABCDABDE</div><div class="line">          |</div><div class="line">        ABCDABD</div></pre></td></tr></table></figure></p>
+<p>因为空格与Ｃ不匹配，搜索词还要继续往后移。这时，已匹配的字符数为2（”AB”），对应的”部分匹配值”为0。所以，移动位数 = 2 - 0，结果为 2，于是将搜索词向后移2位。</p>
+<p>9.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">BBC ABCDAB ABCDABCDABDE</div><div class="line">          |</div><div class="line">          ABCDABD</div></pre></td></tr></table></figure></p>
+<p>因为空格与A不匹配，继续后移一位。</p>
+<p>10.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">BBC ABCDAB ABCDABCDABDE</div><div class="line">                 |</div><div class="line">           ABCDABD</div></pre></td></tr></table></figure></p>
+<p>逐位比较，直到发现C与D不匹配。于是，移动位数 = 6 - 2，继续将搜索词向后移动4位。</p>
+<p>11.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">BBC ABCDAB ABCDABCDABDE</div><div class="line"></div><div class="line">               ABCDABD</div></pre></td></tr></table></figure></p>
+<p>逐位比较，直到搜索词的最后一位，发现完全匹配，于是搜索完成。如果还要继续搜索（即找出全部匹配），移动位数 = 7 - 0，再将搜索词向后移动7位，这里就不再重复了。</p>
+<h5 id="部分匹配值"><a href="#部分匹配值" class="headerlink" title="部分匹配值"></a>部分匹配值</h5><table>
+<thead>
+<tr>
+<th style="text-align:left">搜索词</th>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">C</th>
+<th style="text-align:center">D</th>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">部分匹配值</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+</tr>
+</tbody>
+</table>
+<p><code>部分匹配值</code> 就是 <code>前缀</code> 和 <code>后缀</code> 的最长的共有元素的长度。以”ABCDABD”为例，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&quot;A&quot; 的前缀和后缀都为空集，共有元素的长度为0；</div><div class="line">&quot;AB&quot; 的前缀为[A]，后缀为[B]，共有元素的长度为0；</div><div class="line">&quot;ABC&quot; 的前缀为[A, AB]，后缀为[BC, C]，共有元素的长度0；</div><div class="line">&quot;ABCD&quot; 的前缀为[A, AB, ABC]，后缀为[BCD, CD, D]，共有元素的长度为0；</div><div class="line">&quot;ABCDA&quot; 的前缀为[A, AB, ABC, ABCD]，后缀为[BCDA, CDA, DA, A]，共有元素为&quot;A&quot;，长度为1；</div><div class="line">&quot;ABCDAB&quot; 的前缀为[A, AB, ABC, ABCD, ABCDA]，后缀为[BCDAB, CDAB, DAB, AB, B]，共有元素为&quot;AB&quot;，长度为2；</div><div class="line">&quot;ABCDABD&quot; 的前缀为[A, AB, ABC, ABCD, ABCDA, ABCDAB]，后缀为[BCDABD, CDABD, DABD, ABD, BD, D]，共有元素的长度为0。</div></pre></td></tr></table></figure>
+<h5 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h5><p>Leetcode 28题问题描述:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Returns the index of the first occurrence of needle in haystack, or -1 if needle </div><div class="line">is not part of haystack.</div></pre></td></tr></table></figure>
+<ul>
+<li>部分匹配值的算法实现：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">int</span>[] generateNext(String needle) &#123;</div><div class="line">    <span class="keyword">int</span>[] next = <span class="keyword">new</span> <span class="keyword">int</span>[needle.length()];</div><div class="line">    <span class="keyword">char</span>[] chs = needle.toCharArray();</div><div class="line">    <span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span>(j &lt; chs.length) &#123;</div><div class="line">        <span class="keyword">if</span>(chs[i] == chs[j]) &#123;</div><div class="line">            next[j] = i + <span class="number">1</span>;</div><div class="line">            i++;</div><div class="line">            j++;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">if</span>(i == <span class="number">0</span>) &#123;</div><div class="line">                next[j] = <span class="number">0</span>;</div><div class="line">                j++;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                i = next[i - <span class="number">1</span>];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> next;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>给定一个字符串，通过以上代码可以得出该字符串相应的部分匹配值数组 <code>next</code>。</p>
+<ul>
+<li>字符串匹配</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">strStr</span><span class="params">(String haystack, String needle)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span>(haystack.length() &lt; needle.length()) <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">    </div><div class="line">    <span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span>[] next = generateNext(needle);</div><div class="line">    <span class="keyword">char</span>[] h_chs = haystack.toCharArray(), n_chs = needle.toCharArray();</div><div class="line">    <span class="keyword">while</span>(i &lt; h_chs.length &amp;&amp; j &lt; n_chs.length) &#123;</div><div class="line">        <span class="keyword">if</span>(h_chs[i] == n_chs[j]) &#123;</div><div class="line">            i++;</div><div class="line">            j++;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">if</span>(j == <span class="number">0</span>) &#123;</div><div class="line">                i++;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                j = next[j - <span class="number">1</span>];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> j == n_chs.length? i - n_chs.length : -<span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>根据之前计算出的部分匹配值数组 <code>next</code>，可以通过如上代码计算出匹配字符串 <code>needle</code> 在原字符串 <code>haystack</code> 中相应的匹配位置。</p>
+<h4 id="相关Leetcode题目"><a href="#相关Leetcode题目" class="headerlink" title="相关Leetcode题目"></a>相关Leetcode题目</h4><p><a href="https://leetcode.com/problems/implement-strstr/description/" target="_blank" rel="external">Leetcode: 28. Implement strStr()</a><br><a href="https://leetcode.com/problems/repeated-substring-pattern/description/" target="_blank" rel="external">Leetcode: 459. Repeated Substring Pattern</a></p>
+<h3 id="相关参考"><a href="#相关参考" class="headerlink" title="相关参考"></a>相关参考</h3><blockquote>
+<ul>
+<li><a href="http://kb.cnblogs.com/page/176818/" target="_blank" rel="external">字符串匹配的KMP算法</a></li>
+</ul>
+</blockquote>
 
       
     </div>
@@ -430,7 +526,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/随笔/" rel="tag"># 随笔</a>
+            <a href="/tags/kmp/" rel="tag"># kmp</a>
           
         </div>
       
@@ -443,15 +539,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/07/31/replace-screen/" rel="next" title="记一次Macbook Pro的换屏经历">
+                <i class="fa fa-chevron-left"></i> 记一次Macbook Pro的换屏经历
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/25/markdown-record/" rel="prev" title="Markdown语法小记">
-                Markdown语法小记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -608,7 +704,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#程序员的开场白"><span class="nav-number">1.</span> <span class="nav-text">程序员的开场白</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串匹配"><span class="nav-number">1.</span> <span class="nav-text">字符串匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Brust-Force"><span class="nav-number">1.1.</span> <span class="nav-text">Brust Force</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#KMP"><span class="nav-number">1.2.</span> <span class="nav-text">KMP</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#具体步骤"><span class="nav-number">1.2.1.</span> <span class="nav-text">具体步骤</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#部分匹配值"><span class="nav-number">1.2.2.</span> <span class="nav-text">部分匹配值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代码实现"><span class="nav-number">1.2.3.</span> <span class="nav-text">代码实现</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相关Leetcode题目"><span class="nav-number">1.3.</span> <span class="nav-text">相关Leetcode题目</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相关参考"><span class="nav-number">2.</span> <span class="nav-text">相关参考</span></a></li></ol></div>
             
 
           </div>
