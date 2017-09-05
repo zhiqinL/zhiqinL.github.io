@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhiqinl.github.io/"/>
-  <updated>2017-08-24T08:20:32.000Z</updated>
+  <updated>2017-08-24T08:41:29.000Z</updated>
   <id>https://zhiqinl.github.io/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title>Binary Tree Traversal</title>
     <link href="https://zhiqinl.github.io/2017/08/24/tree-traversal/"/>
     <id>https://zhiqinl.github.io/2017/08/24/tree-traversal/</id>
-    <published>2017-08-24T07:11:29.000Z</published>
-    <updated>2017-08-24T08:20:32.000Z</updated>
+    <published>2017-08-24T22:11:29.000Z</published>
+    <updated>2017-08-24T08:41:29.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="树的遍历"><a href="#树的遍历" class="headerlink" title="树的遍历"></a>树的遍历</h3><p>二叉树的遍历是算法问题中一个特别基础的问题，主要分为三种，前序，中序和后序，不同的遍历方法会将树的节点以不同的顺序输出，这篇文章主要用来记录二叉树三种遍历具体的代码实现。</p>
 <a id="more"></a>
@@ -75,7 +75,7 @@
     <title>快速排序 &amp; 归并排序小记</title>
     <link href="https://zhiqinl.github.io/2017/08/15/sort/"/>
     <id>https://zhiqinl.github.io/2017/08/15/sort/</id>
-    <published>2017-08-15T07:54:29.000Z</published>
+    <published>2017-08-15T22:54:29.000Z</published>
     <updated>2017-08-15T08:40:15.000Z</updated>
     
     <content type="html"><![CDATA[<p>排序是在学习算法和编程中最基础的一部分，而快速排序和归并排序又是这其中使用最普遍的两种排序方式，具体两种排序的实现原理网上有大量的讲解，这里只记录一些具体的代码实现，方便自己忘记的时候进行查阅。</p>
@@ -112,7 +112,7 @@
     <title>KMP字符串匹配算法</title>
     <link href="https://zhiqinl.github.io/2017/08/13/kmp-algorithm/"/>
     <id>https://zhiqinl.github.io/2017/08/13/kmp-algorithm/</id>
-    <published>2017-08-13T09:30:38.000Z</published>
+    <published>2017-08-14T00:30:38.000Z</published>
     <updated>2017-08-15T08:03:08.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="字符串匹配"><a href="#字符串匹配" class="headerlink" title="字符串匹配"></a>字符串匹配</h3><p>字符串匹配是算法题中常考的一个类型，而且通常会在更复杂的题目中和其他类型的问题搭配出现。<br>举例来说，有一个字符串”BBC ABCDAB ABCDABCDABDE”，来检测这其中是否含有另一个字符串”ABCDABD”就是字符串的匹配问题。</p>
@@ -235,7 +235,7 @@
     <title>记一次Macbook Pro的换屏经历</title>
     <link href="https://zhiqinl.github.io/2017/07/31/replace-screen/"/>
     <id>https://zhiqinl.github.io/2017/07/31/replace-screen/</id>
-    <published>2017-07-31T07:45:40.000Z</published>
+    <published>2017-07-31T22:45:40.000Z</published>
     <updated>2017-07-31T09:18:46.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="换屏动机"><a href="#换屏动机" class="headerlink" title="换屏动机"></a>换屏动机</h2><p>用Macbook Pro的小伙伴们肯定或多或少的都听说过Macbook retain屏幕的镀膜图层脱落的问题，本人手中的15寸的pro小老婆也无可避免的遇到了这个问题，一小片一小片脱落的图层在整个屏幕上显得十分的丑陋并且影响观感，然而我实在是懒得不行一直不愿意去管，直到最近开始发现已经有点影响到正常的屏幕显示了，实在受不了了就Google了一下这个问题，发现在国内竟然也可以免费换屏，那这就没啥说的了，果断换之。</p>
@@ -272,7 +272,7 @@
     <title>Markdown语法小记</title>
     <link href="https://zhiqinl.github.io/2017/07/25/markdown-record/"/>
     <id>https://zhiqinl.github.io/2017/07/25/markdown-record/</id>
-    <published>2017-07-25T07:49:05.000Z</published>
+    <published>2017-07-25T22:49:05.000Z</published>
     <updated>2017-07-25T13:49:15.000Z</updated>
     
     <content type="html"><![CDATA[<p>在真正写博客之前虽有对Markdown有所了解，但是从来没有仔细学习过它的各种语法，仔细想想刚开始部署GitHub的时候，还对readme的md后缀懵逼过，十分的惭愧，所以现在准备好好记录一下.</p>
@@ -386,7 +386,7 @@
     <title>Hello World</title>
     <link href="https://zhiqinl.github.io/2017/07/23/hello-world/"/>
     <id>https://zhiqinl.github.io/2017/07/23/hello-world/</id>
-    <published>2017-07-23T12:19:22.000Z</published>
+    <published>2017-07-24T03:19:22.000Z</published>
     <updated>2017-07-23T12:24:53.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="程序员的开场白"><a href="#程序员的开场白" class="headerlink" title="程序员的开场白"></a>程序员的开场白</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">start</span><span class="params">()</span>:</span></div><div class="line">    print(<span class="string">'Hello World'</span>)</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    start()</div></pre></td></tr></table></figure>
